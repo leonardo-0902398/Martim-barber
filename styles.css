@@ -207,3 +207,6 @@ h1, h2, h3, p { margin-top: 0; }
   .site-footer { padding: 25px 6%; flex-wrap: wrap; }
   .site-footer p { order: 3; width: 100%; }
 }
+
+
+.brand-mark { background: var(--paper); }
