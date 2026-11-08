@@ -10,6 +10,71 @@
   --body: "DM Sans", Arial, sans-serif;
 }
 
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+
+
+.site-header { height: 88px; padding: 0 7.2%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); position: relative; z-index: 5; }
+.brand { display: inline-flex; align-items: center; gap: 11px; }
+.brand-mark { width: 48px; height: 48px; flex: 0 0 48px; overflow: hidden; display: block; background: var(--paper); }
+.brand-mark img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.brand-name { font: 600 15px/1 var(--display); letter-spacing: 1.4px; }
+.brand-name b { font-weight: 400; color: var(--muted); }
+.main-nav { display: flex; align-items: center; gap: 39px; font-size: 12px; font-weight: 600; }
+.main-nav > a:not(.button) { transition: color .2s ease; }
+.main-nav > a:not(.button):hover, .text-link:hover { color: #647d35; }
+.button { min-height: 53px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 24px; border: 1px solid var(--lime); background: var(--lime); color: var(--ink); font-size: 12px; font-weight: 700; transition: background .2s, color .2s, transform .2s; }
+.button:hover { background: var(--ink); color: var(--lime); transform: translateY(-2px); }
+.button-small { min-height: 41px; padding: 0 16px; gap: 14px; }
+.menu-toggle { display: none; }
+
+
+.hero { position: relative; min-height: 665px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 70px 7.2% 94px; overflow: hidden; }
+.hero-copy { position: relative; z-index: 1; padding: 13px 0 0 3.2%; }
+.eyebrow { margin: 0 0 23px; font-size: 10px; font-weight: 700; letter-spacing: 2px; }
+.status-dot { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: #779b37; vertical-align: 1px; }
+h1, h2, h3, p { margin-top: 0; }
+.hero h1, .section-heading h2, .about h2, .visit h2, .booking-banner h2 { margin-bottom: 0; font: 500 clamp(62px, 7.1vw, 104px)/.98 var(--display); letter-spacing: -2px; text-transform: uppercase; }
+.hero h1 span, .section-heading h2 span, .about h2 span, .visit h2 span, .booking-banner h2 span { color: #758b4b; }
+.hero-intro { max-width: 390px; margin: 27px 0 29px; color: #66695f; font-size: 14px; line-height: 1.8; }
+.hero-actions { display: flex; align-items: center; gap: 27px; }
+.text-link { display: inline-flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 700; transition: color .2s ease; }
+.hero-note { display: flex; align-items: center; gap: 10px; margin-top: 54px; color: var(--muted); font-size: 10px; }
+.note-mark { width: 21px; height: 21px; display: grid; place-items: center; border: 1px solid var(--line); color: #647d35; font-size: 12px; }
+.hero-visual { position: relative; height: 492px; margin-left: 6%; }
+.hero-image { position: absolute; inset: 0 0 22px 10%; background: #454a3f url("assets/corte-martim.png") center 43% / cover; }
+.hero-visual::after { position: absolute; z-index: 1; inset: 0 0 22px 10%; content: ""; pointer-events: none; background: linear-gradient(180deg, transparent 56%, rgba(12, 14, 11, .38)); }
+.hero-stamp { position: absolute; top: 28px; left: -30px; width: 88px; height: 88px; padding: 11px; background: var(--lime); display: flex; flex-direction: column; justify-content: space-between; transform: rotate(-7deg); }
+.hero-stamp span { font-size: 8px; line-height: 1.3; font-weight: 700; letter-spacing: 1px; }
+.hero-stamp b { font: 500 29px/.8 var(--display); }
+.hero-caption { position: absolute; bottom: 0; left: 10%; right: 0; display: flex; justify-content: space-between; color: var(--muted); font-size: 8px; font-weight: 700; letter-spacing: 1.2px; }
+.hero-index { position: absolute; left: 2.4%; bottom: 69px; writing-mode: vertical-rl; transform: rotate(180deg); color: #8d8e86; font-size: 8px; font-weight: 700; letter-spacing: 2px; }
+
+
+.ticker { height: 66px; overflow: hidden; display: flex; align-items: center; background: var(--ink); color: var(--paper); }
+.ticker-track { min-width: max-content; display: flex; align-items: center; justify-content: space-around; gap: 46px; animation: marquee 28s linear infinite; }
+.ticker span { font: 500 18px/1 var(--display); letter-spacing: 2px; }
+.ticker i { color: var(--lime); font-size: 17px; font-style: normal; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+
+.section-wrap { padding-left: 10.4%; padding-right: 10.4%; }
+.services { padding-top: 108px; padding-bottom: 108px; }:root {
+  color-scheme: light;
+  --ink: #171a16;
+  --paper: #f3f1e9;
+  --cream: #e6e2d6;
+  --lime: #c4f16c;
+  --muted: #77796f;
+  --line: rgba(23, 26, 22, .18);
+  --display: "Oswald", Impact, sans-serif;
+  --body: "DM Sans", Arial, sans-serif;
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); -webkit-font-smoothing: antialiased; }
