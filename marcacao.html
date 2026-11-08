@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#141714">
+    <meta name="description" content="Escolhe o teu plano ou serviço individual e pede uma marcação ao domicílio ao Martim Barber.">
+    <title>Marcação — Martim Barber</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking.css">
+    <script src="booking.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header booking-header">
+      <a class="brand" href="index.html" aria-label="Martim Barber — início">
+        <span class="brand-mark" aria-hidden="true">M<span>/</span></span>
+        <span class="brand-name">MARTIM <b>BARBER</b></span>
+      </a>
+      <a class="booking-back" href="index.html"><span aria-hidden="true">←</span> Voltar ao site</a>
+    </header>
+
+    <main class="booking-page">
+      <section class="booking-intro">
+        <p class="eyebrow"><span class="status-dot"></span> BARBEIRO AO DOMICÍLIO</p>
+        <h1>O teu próximo<br><span>corte começa aqui.</span></h1>
+        <p>Escolhe o plano ou serviço, diz-me onde e quando. Confirmo contigo pelo WhatsApp.</p>
+      </section>
+
+      <form class="booking-form" id="booking-form">
+        <fieldset class="booking-service-group">
+          <legend><span>01</span> Escolhe o teu serviço</legend>
+          <div class="booking-options">
+            <label class="booking-option booking-option-plan">
+              <input type="radio" name="servico" value="plano-degrade" data-label="Plano mensal — Degradê" data-price="15 €/mês — 4 cortes por mês" required>
+              <span class="booking-option-content">
+                <span class="booking-option-kind">PLANO MENSAL</span>
+                <span class="booking-option-name">Degradê</span>
+                <span class="booking-option-benefits">
+                  <span class="booking-option-monthly"><b aria-hidden="true">✳</b> 4 cortes por mês</span>
+                  <span><b aria-hidden="true">✳</b> Apenas degradê</span>
+                </span>
+                <span class="booking-option-rate">3,75 € por corte</span>
+              </span>
+              <span class="booking-option-price">15 €<small>/mês</small></span>
+              <span class="booking-option-check" aria-hidden="true">✓</span>
+            </label>
+            <label class="booking-option booking-option-plan">
+              <input type="radio" name="servico" value="plano-degrade-barba" data-label="Plano mensal — Degradê e barba" data-price="20 €/mês — 4 cortes com degradê e barba" required>
+              <span class="booking-option-content">
+                <span class="booking-option-kind">PLANO MENSAL</span>
+                <span class="booking-option-name">Degradê e barba</span>
+                <span class="booking-option-benefits">
+                  <span class="booking-option-monthly"><b aria-hidden="true">✳</b> 4 cortes por mês</span>
+                  <span><b aria-hidden="true">✳</b> Degradê + barba</span>
+                </span>
+                <span class="booking-option-rate">5 € por corte + barba</span>
+              </span>
+              <span class="booking-option-price">20 €<small>/mês</small></span>
+              <span class="booking-option-check" aria-hidden="true">✓</span>
+            </label>
+            <label class="booking-option booking-option-individual">
+              <input type="radio" name="servico" value="corte" data-label="Serviço individual — Corte" data-price="5 €" required>
+              <span class="booking-option-content">
+                <span class="booking-option-kind">SERVIÇO INDIVIDUAL</span>
+                <span class="booking-option-name">Corte</span>
+              </span>
+              <span class="booking-option-price">5 €</span>
+              <span class="booking-option-check" aria-hidden="true">✓</span>
+            </label>
+            <label class="booking-option booking-option-individual">
+              <input type="radio" name="servico" value="degrade-barba" data-label="Serviço individual — Degradê e barba" data-price="7 €" required>
+              <span class="booking-option-content">
+                <span class="booking-option-kind">SERVIÇO INDIVIDUAL</span>
+                <span class="booking-option-name">Degradê e barba</span>
+              </span>
+              <span class="booking-option-price">7 €</span>
+              <span class="booking-option-check" aria-hidden="true">✓</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="booking-details">
+          <legend><span>02</span> Onde e quando?</legend>
+          <div class="booking-fields">
+            <label class="booking-field booking-field-wide">
+              <span>Morada onde será o corte</span>
+              <input name="morada" type="text" autocomplete="street-address" placeholder="Rua, número, código postal e localidade" required>
+            </label>
+            <label class="booking-field">
+              <span>Dia pretendido</span>
+              <input name="data" type="date" required>
+            </label>
+            <label class="booking-field">
+              <span>Hora preferida <small>(formato 24 horas)</small></span>
+              <input name="hora" type="text" inputmode="numeric" autocomplete="off" placeholder="HH:MM" pattern="([01][0-9]|2[0-3]):[0-5][0-9]" maxlength="5" title="Introduz a hora no formato 24 horas, por exemplo 14:30." required>
+            </label>
+            <label class="booking-field">
+              <span>O teu nome</span>
+              <input name="nome" type="text" autocomplete="name" placeholder="Como te chamas?" required>
+            </label>
+            <label class="booking-field">
+              <span>O teu telemóvel</span>
+              <input name="telefone" type="tel" autocomplete="tel" placeholder="+351 ..." required>
+            </label>
+            <label class="booking-field booking-field-wide">
+              <span>Nota adicional <small>(opcional)</small></span>
+              <textarea name="nota" rows="3" placeholder="Algum detalhe que deva saber?"></textarea>
+            </label>
+          </div>
+          <p class="booking-disclaimer">Ao continuar, abre-se uma mensagem pronta no WhatsApp. Para eu receber o pedido, tens de carregar em Enviar na conversa. A marcação só fica confirmada depois de eu confirmar a disponibilidade.</p>
+          <button class="button booking-submit" type="submit">Abrir WhatsApp para enviar o pedido <span aria-hidden="true">↗</span></button>
+          <p class="booking-status" id="booking-status" aria-live="polite"></p>
+        </fieldset>
+      </form>
+    </main>
+
+    <footer class="site-footer booking-footer">
+      <a class="brand" href="index.html" aria-label="Martim Barber — início">
+        <span class="brand-mark" aria-hidden="true">M<span>/</span></span>
+        <span class="brand-name">MARTIM <b>BARBER</b></span>
+      </a>
+      <p>Barbeiro ao domicílio · Marca pela internet</p>
+      <span>© 2026 MARTIM BARBER</span>
+    </footer>
+  </body>
+</html>
