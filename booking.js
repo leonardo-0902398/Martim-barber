@@ -53,15 +53,6 @@ bookingForm.addEventListener("submit", (event) => {
     "Se for um plano mensal, combinamos os restantes cortes contigo.",
   ].join("\n");
   const whatsappUrl = `https://wa.me/351934335622?text=${encodeURIComponent(message)}`;
-  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-  bookingStatus.replaceChildren(
-    document.createTextNode("A mensagem está pronta. Se o WhatsApp não abriu, "),
-    Object.assign(document.createElement("a"), {
-      href: whatsappUrl,
-      target: "_blank",
-      rel: "noopener noreferrer",
-      textContent: "toca aqui para abrir a conversa",
-    }),
-    document.createTextNode(". Depois, carrega em Enviar para eu receber o pedido.")
-  );
+  bookingStatus.textContent = "A abrir o WhatsApp…";
+  window.location.assign(whatsappUrl);
 });
