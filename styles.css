@@ -18,8 +18,8 @@ button { font: inherit; }
 
 .site-header { height: 88px; padding: 0 7.2%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); position: relative; z-index: 5; }
 .brand { display: inline-flex; align-items: center; gap: 11px; }
-.brand-mark { width: 39px; height: 39px; display: grid; place-items: center; background: var(--ink); color: var(--lime); font: 600 23px/1 var(--display); letter-spacing: -2px; }
-.brand-mark span { color: var(--paper); }
+.brand-mark { width: 48px; height: 48px; flex: 0 0 48px; overflow: hidden; display: block; background: var(--ink); }
+.brand-mark img { width: 100%; height: 100%; display: block; object-fit: cover; }
 .brand-name { font: 600 15px/1 var(--display); letter-spacing: 1.4px; }
 .brand-name b { font-weight: 400; color: var(--muted); }
 .main-nav { display: flex; align-items: center; gap: 39px; font-size: 12px; font-weight: 600; }
@@ -159,7 +159,7 @@ h1, h2, h3, p { margin-top: 0; }
 
 @media (max-width: 620px) {
   .site-header { height: 70px; padding: 0 6%; }
-  .brand-mark { width: 35px; height: 35px; }
+  .brand-mark { width: 35px; height: 35px; flex-basis: 35px; }
   .menu-toggle { width: 42px; height: 42px; padding: 12px 8px; border: 0; background: none; display: flex; flex-direction: column; justify-content: center; gap: 6px; cursor: pointer; }
   .menu-toggle span { width: 24px; height: 1px; background: var(--ink); transition: transform .2s; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }
