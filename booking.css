@@ -53,8 +53,31 @@
 .booking-status a { text-decoration: underline; font-weight: 700; }
 .booking-footer { border-top: 1px solid var(--line); }
 
+:root[data-theme="light"] .booking-intro h1 span,
+:root[data-theme="light"] .booking-form legend span { color: #666; }
+:root[data-theme="light"] .booking-option:hover { background: #ededed; }
+:root[data-theme="light"] .booking-option-plan:has(input:checked) { border-color: #ccc; background: #e9e9e9; color: var(--ink); }
+:root[data-theme="light"] .booking-option-plan:has(input:checked) .booking-option-kind,
+:root[data-theme="light"] .booking-option-plan:has(input:checked) .booking-option-rate,
+:root[data-theme="light"] .booking-option-plan:has(input:checked) .booking-option-price small { color: #666; }
+:root[data-theme="light"] .booking-option-benefits > span,
+:root[data-theme="light"] .booking-option-plan:has(input:checked) .booking-option-benefits > span { background: rgba(0,0,0,.05); color: var(--ink); }
+:root[data-theme="light"] .booking-option-benefits b { color: #555; }
+:root[data-theme="light"] .booking-option-plan:has(input:checked) .booking-option-benefits b { color: var(--ink); }
+:root[data-theme="light"] .booking-option:has(input:checked) .booking-option-check,
+:root[data-theme="light"] .booking-option-plan:has(input:checked) .booking-option-check { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+:root[data-theme="light"] .booking-option:focus-within { outline-color: var(--ink); }
+:root[data-theme="light"] .booking-field input,
+:root[data-theme="light"] .booking-field textarea { background: rgba(0,0,0,.025); }
+:root[data-theme="light"] .booking-field input:focus,
+:root[data-theme="light"] .booking-field textarea:focus { border-color: var(--ink); box-shadow: 0 0 0 2px rgba(0,0,0,.12); }
+:root[data-theme="light"] .booking-field input::placeholder,
+:root[data-theme="light"] .booking-field textarea::placeholder { color: #666; }
+:root[data-theme="light"] .booking-status { color: #444; }
+
 @media (max-width: 620px) {
-  .booking-header { height: 70px; padding: 0 6%; }
+  .booking-header { height: auto; min-height: 70px; padding: 12px 6%; display: grid; grid-template-columns: 1fr auto; gap: 12px; }
+  .booking-back { grid-column: 1 / -1; }
   .booking-page { width: 88%; padding: 55px 0 70px; }
   .booking-intro { margin-bottom: 35px; }
   .booking-intro h1 { font-size: clamp(47px, 12vw, 62px); }
